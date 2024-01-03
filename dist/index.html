@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/fs.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Html -> F#</title>
+        <meta name="description" content="Convert HTML to FSharp DSL">
+        <meta name="author" content="kaashyapan.com">
+        <meta name="keywords" content="FSharp, F#, converter, Feliz, Sutil, Giraffe, Elmish, Bolero, F# DSL">
+      <script type="module" crossorigin src="/assets/index-5t97wiIH.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/style-uCb9v4N0.css">
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <h3 class="title has-text-centered">
+                        <span
+                            ><img src="fs.svg" class="logo" alt="F# logo"
+                        /></span>
+                        <span>HTML |> F# DSL</span>
+                    </h3>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="tabs is-toggle">
+                            <ul>
+                                <li class="is-active">
+                                    <a id="feliz">Feliz</a>
+                                </li>
+                                <li><a id="bolero">Bolero</a></li>
+                                <li><a id="sutil">Sutil</a></li>
+                                <li><a id="giraffe">Giraffe</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-white">
+                                <span class="icon"
+                                    ><img
+                                        src="github.svg"
+                                        class="logo"
+                                        alt="Github"
+                                /></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="section">
+            <div class="columns is-vcentered is-centered">
+                <div class="column">
+                    <div
+                        id="htmleditor"
+                        class="editor language-markup language-html"
+                        data-manual
+                        data-gramm="false"
+                    ></div>
+                </div>
+                <div class="column is-narrow">
+                    <a id="convert-me"><i class="gg-play-button-o"></i></a>
+                    <br />
+                    <a id="clear-me"><i class="gg-close-o"></i></a>
+                </div>
+                <div class="column">
+                    <a id="copy-me"><i class="gg-copy"></i></a>
+                    <div
+                        id="fs-editor"
+                        class="editor language-fsharp"
+                        data-manual
+                        data-gramm="false"
+                    ></div>
+                </div>
+            </div>
+        </div>
+        <div class="section is-small">
+          <div class="content has-text-right">
+            <p>
+               <a href="https://kaashyapan.com"><strong>kaashyapan</strong></a>
+            </p>
+          </div>
+        </div>
+
+    </body>
+</html>
