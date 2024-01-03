@@ -1,9 +1,10 @@
 import './style.scss'
+import 'prismjs/themes/prism-okaidia.css'
 
 import { CodeJar } from 'codejar'
 import Prism from 'prismjs'
-import 'prismjs/components/prism-fsharp'
 import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-fsharp'
 import { parse_html } from './html_parser'
 import { get_key, startup } from './choose_lib'
 import { to_bolero } from './dom_bolero'
