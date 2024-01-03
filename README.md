@@ -8,3 +8,7 @@ Convert Html fragments to one of the popular F# DSL.
 
 Hosted live : [https://html-to-fsharp.pages.dev/](https://html-to-fsharp.pages.dev/)
 
+
+![Demo](https://github.com/kaashyapan/html-to-fsharp/blob/main/demo.gif)
+
+
