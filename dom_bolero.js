@@ -11,13 +11,17 @@ const writeElement = (h) => {
         let attrs = []
         for (const property in h.attrs) {
             let p = property
-                .replace('class', '``class``')
-                .replace('type', '``type``')
+                .trim()
+                .replace(/class$/, '``class``')
+                .replace(/type$/, '``type``')
+
+            const _attr = h.attrs[property]
+
             if (p.includes('-')) {
                 //webcomponents
-                attrs.push(`"${p}" => "${h.attrs[property]}"\n`)
+                attrs.push(`"${p}" => "${_attr}"\n`)
             } else {
-                attrs.push(`attr.${p} "${h.attrs[property]}"\n`)
+                attrs.push(`attr.${p} "${_attr}"\n`)
             }
         }
 

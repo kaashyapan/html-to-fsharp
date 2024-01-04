@@ -14,17 +14,19 @@ const writeElement = (h) => {
         }
 
         let attrs = []
-        for (const property in h.attrs) {
-            let p = property
-                .replace('class', 'className')
-                .replace('id', `id'`)
-                .replace('type', "type'")
-            //TODO expand style object to prop.style
+        for (const attr in h.attrs) {
+            let p = attr
+                .trim()
+                .replace(/class$/, 'className')
+                .replace(/id$/, `id'`)
+                .replace(/type$/, "type'")
+
+            const _attr = attrStringify(h.attrs[attr])
             if (p.includes('-')) {
                 //webcomponents
-                attrs.push(`prop.custom "${p}" "${h.attrs[property]}"\n`)
+                attrs.push(`prop.custom "${p}" ${_attr}\n`)
             } else {
-                attrs.push(`prop.${p} "${h.attrs[property]}"\n`)
+                attrs.push(`prop.${p} ${_attr}\n`)
             }
         }
 
@@ -43,7 +45,7 @@ const writeElement = (h) => {
         accum.push(' '.repeat(indent))
         accum.push(`]\n`)
     }
-        indent = indent - 4
+    indent = indent - 4
 }
 
 export function to_feliz(h) {

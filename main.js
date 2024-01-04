@@ -59,15 +59,15 @@ convert_me.addEventListener('click', (e) => {
     if (lib == 'bolero') fs_str = to_bolero(jobjs)
     if (lib == 'sutil') fs_str = to_sutil(jobjs)
 
-    fs_jar.restore({start: 0, end: 0})
+    fs_jar.restore({ start: 0, end: 0 })
     fs_jar.updateCode(getRidofEmptyLines(fs_str))
 })
 
 clear_me.addEventListener('click', (e) => {
     e.preventDefault()
     e.stopPropagation()
-    fs_jar.restore({start: 0, end: 0})
-    html_jar.restore({start: 0, end: 0})
+    fs_jar.restore({ start: 0, end: 0 })
+    html_jar.restore({ start: 0, end: 0 })
     fs_jar.updateCode('//Enter valid HTML on the left and click to convert')
     html_jar.updateCode('')
 })

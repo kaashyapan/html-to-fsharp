@@ -1,3 +1,5 @@
+import { attrStringify } from './helper'
+
 let accum = []
 let indent = 0
 
@@ -16,14 +18,17 @@ const writeElement = (h) => {
         let attrs = []
         for (const attr in h.attrs) {
             let p = attr
-                .replace('class', "class'")
-                .replace('id', `id'`)
-                .replace('type', "type'")
+                .trim()
+                .replace(/class$/, "class'")
+                .replace(/id$/, `id'`)
+                .replace(/type$/, "type'")
+
+            const _attr = attrStringify(h.attrs[attr])
             if (p.includes('-')) {
                 //webcomponents
-                attrs.push(`Attr.custom "${p}" "${h.attrs[attr]}"\n`)
+                attrs.push(`Attr.custom "${p}" ${_attr}\n`)
             } else {
-                attrs.push(`Attr.${p} "${h.attrs[attr]}"\n`)
+                attrs.push(`Attr.${p} ${_attr}\n`)
             }
         }
 
@@ -42,7 +47,7 @@ const writeElement = (h) => {
         accum.push(' '.repeat(indent))
         accum.push(`]\n`)
     }
-        indent = indent - 4
+    indent = indent - 4
 }
 
 export function to_sutil(h) {
