@@ -213,17 +213,24 @@ $panel-heading-background-color: $grey-dark;
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
     font-weight: 400;
-    min-height: 85vh;
-    height: 85vh;
-    min-width: 100%;
     letter-spacing: normal;
     line-height: 20px;
     padding: 10px;
     tab-size: 2;
+    position: sticky;
 }
 
 #copy-me {
     position: absolute;
     right: 2vw;
     z-index: 2;
+}
+
+.editor-size {
+    min-height: 85vh;
+    max-height: 85vh;
+    width: 85vw;
+    @include desktop {
+      width: 44vw;
+    }
 }
