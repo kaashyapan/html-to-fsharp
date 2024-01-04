@@ -42,6 +42,8 @@ convert_me.addEventListener('click', (e) => {
     e.preventDefault()
     e.stopPropagation()
     const code = html_jar.toString()
+    html_jar.updateCode(code.trim())
+
     const jobjs = parse_html(code)
 
     const lib = get_key()

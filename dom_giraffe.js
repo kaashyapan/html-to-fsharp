@@ -54,6 +54,7 @@ const writeElement = (h) => {
 
 export function to_giraffe(h) {
     accum = []
+    indent = 0
     h.forEach((e) => writeElement(e))
     return accum.join('')
 }

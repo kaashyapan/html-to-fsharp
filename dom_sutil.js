@@ -52,6 +52,7 @@ const writeElement = (h) => {
 
 export function to_sutil(h) {
     accum = []
+    indent = 0
     h.forEach((e) => writeElement(e))
     return accum.join('')
 }
