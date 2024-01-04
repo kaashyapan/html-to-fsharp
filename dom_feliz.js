@@ -1,3 +1,5 @@
+import { attrStringify } from './helper'
+
 let accum = []
 let indent = 0
 

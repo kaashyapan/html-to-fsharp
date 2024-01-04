@@ -9,12 +9,11 @@ export function attrStringify(str) {
     let val = str.trim()
     let pattern = /[^0123456789.]/
     if (val.match(pattern)) {
+      if (val === 'true' || val === 'false') {
+      return val
+    } else
         return `"${val}"`
-    } else if (val === 'true') {
-        return `true`
-    } else if (val === 'false') {
-        return `false`
-    } else {
+    }  else {
         return val
     }
 }
