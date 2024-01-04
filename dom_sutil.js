@@ -19,7 +19,7 @@ const writeElement = (h) => {
         for (const attr in h.attrs) {
             let p = attr
                 .trim()
-                .replace(/class$/, "class'")
+                .replace(/class$/, 'className')
                 .replace(/id$/, `id'`)
                 .replace(/type$/, "type'")
 

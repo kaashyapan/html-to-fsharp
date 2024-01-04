@@ -1,10 +1,7 @@
 import './style.scss'
-import 'prismjs/themes/prism-okaidia.css'
 
 import { CodeJar } from 'codejar'
-import Prism from 'prismjs'
-import 'prismjs/components/prism-markup'
-import 'prismjs/components/prism-fsharp'
+
 import { parse_html } from './html_parser'
 import { get_key, startup } from './choose_lib'
 import { to_bolero } from './dom_bolero'
@@ -20,18 +17,14 @@ const clear_me = document.querySelector('#clear-me')
 const fs_editor = document.querySelector('#fs-editor')
 
 const highlight_html = (editor) => {
-    editor.innerHTML = Prism.highlight(
-        editor.textContent,
-        Prism.languages.html,
-        'html'
-    )
+    editor.innerHTML = window.hljs.highlight(editor.textContent, {
+        language: 'html',
+    }).value
 }
 const highlight_fsharp = (editor) => {
-    editor.innerHTML = Prism.highlight(
-        editor.textContent,
-        Prism.languages.fsharp,
-        'fsharp'
-    )
+    editor.innerHTML = window.hljs.highlight(editor.textContent, {
+        language: 'fsharp',
+    }).value
 }
 
 startup()

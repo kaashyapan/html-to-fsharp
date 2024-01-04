@@ -1,14 +1,7 @@
 import { defineConfig } from 'vite'
-import { prismjsPlugin } from 'vite-plugin-prismjs'
 
 export default defineConfig({
-    plugins: [
-        prismjsPlugin({
-            languages: 'all',
-            plugins: ['line-numbers'],
-            css: true,
-        }),
-    ],
+    plugins: [],
     build: {
         cssCodeSplit: false,
     },
