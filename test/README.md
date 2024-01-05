@@ -1,4 +1,1 @@
-##Todo
-
-fable is installed globally
-
+## Todo

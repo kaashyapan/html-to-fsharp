@@ -35,9 +35,11 @@ const options = {
     history: false,
 }
 
+const defaultMsg = '// Enter valid HTML on the left and click > to convert'
+
 const html_jar = CodeJar(html_editor, highlight_html, options)
 const fs_jar = CodeJar(fs_editor, highlight_fsharp, options)
-fs_jar.updateCode('//Enter valid HTML on the left and click to convert')
+fs_jar.updateCode(defaultMsg)
 
 convert_me.addEventListener('click', (e) => {
     e.preventDefault()
@@ -65,7 +67,7 @@ clear_me.addEventListener('click', (e) => {
     e.stopPropagation()
     fs_jar.restore({ start: 0, end: 0 })
     html_jar.restore({ start: 0, end: 0 })
-    fs_jar.updateCode('//Enter valid HTML on the left and click to convert')
+    fs_jar.updateCode(defaultMsg)
     html_jar.updateCode('')
 })
 

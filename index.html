@@ -4,8 +4,9 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/fs.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Html->F#</title>
-        <meta name="description" content="Convert HTML to FSharp DSL" />
+        <title>Html &gt; F#</title>
+        <meta name="description" content="Convert HTML to one of the FSharp DSLs Feliz, Sutil, Web Sharper, Giraffe, Bolero" />
+
         <meta name="author" content="kaashyapan.com" />
         <meta
             name="keywords"
@@ -17,7 +18,6 @@
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/fsharp.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/html.min.js"></script>
     </head>
     <body>
         <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -27,17 +27,21 @@
                         <span
                             ><img src="fs.svg" class="logo" alt="F# logo"
                         /></span>
-                        <span>HTML > F# DSL</span>
+                        <span>HTML</span>
+                        <span class="is-family-monospace">&gt;</span>
+                        <span>F# DSL</span>
                     </h3>
                 </a>
             </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div id="navbarBasicExample" class="navbar-menu is-active">
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <div class="tabs is-toggle">
+                        <div class="tabs is-toggle is-mobile">
                             <ul>
-                                <li class="is-active"><a id="feliz">Feliz</a></li>
+                                <li class="is-active">
+                                    <a id="feliz">Feliz</a>
+                                </li>
                                 <li><a id="bolero">Bolero</a></li>
                                 <li><a id="sutil">Sutil</a></li>
                                 <li><a id="websharper">Web Sharper</a></li>
@@ -45,28 +49,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a
-                                class="button is-white"
-                                target="_blank"
-                                href="https://github.com/kaashyapan/html-to-fsharp"
-                            >
-                                <span class="icon"
-                                    ><img
-                                        src="github.svg"
-                                        class="logo"
-                                        alt="Github"
-                                /></span>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="navbar-item"></div>
                 </div>
             </div>
         </nav>
 
         <div class="section">
-            <div class="columns is-vcentered is-centered">
+            <div class="columns is-centered is-vcentered">
                 <div class="column">
                     <div
                         id="htmleditor"
@@ -75,15 +64,17 @@
                         data-gramm="false"
                     ></div>
                 </div>
-                <div class="column is-narrow">
-                    <div>
-                        <a id="convert-me"><i class="gg-play-button-o"></i></a>
+                <div class="column is-narrow has-text-centered">
+                    <div class="is-flex-touch has-text-centered">
+                        <a id="convert-me" class="p-4"
+                            ><i class="gg-play-button-o"></i
+                        ></a>
+                        <br class="is-visible-desktop" />
+                        <a id="clear-me" class="p-4"
+                            ><i class="gg-close-o"></i
+                        ></a>
                     </div>
-                    <br />
-                    <br />
-                    <div>
-                        <a id="clear-me"><i class="gg-close-o"></i></a>
-                    </div>
+                    <div class=""></div>
                 </div>
                 <div class="column">
                     <a id="copy-me"><i class="gg-copy"></i></a>
@@ -96,12 +87,41 @@
         </div>
         <div class="section">
             <div class="container">
-                <div class="content has-text-left is-size-7">
-                    <p>* SVG markup may not work</p>
-                    <p>* Does not check if Attributes/Html elements are actually defined in the libraries.</p>
-                </div>
-                <div class="content has-text-right has-text-weight-light">
-                    <a href="https://kaashyapan.com">by kāśyapaṉ</a>
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <div class="content has-text-left is-size-7">
+                                <p>* SVG markup may not work</p>
+                                <p>
+                                    * Does not check if Attributes/Html elements
+                                    are actually defined in the libraries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <p class="has-text-right">
+                                <a
+                                    class="button is-white"
+                                    target="_blank"
+                                    href="https://github.com/kaashyapan/html-to-fsharp"
+                                >
+                                    <span class="icon"
+                                        ><img
+                                            src="github.svg"
+                                            class="logo"
+                                            alt="Github"
+                                    /></span>
+                                </a>
+                            </p>
+                            <p class="content px-4 has-text-weight-light">
+                                <a target="_blank" href="https://kaashyapan.com"
+                                    >by kāśyapaṉ</a
+                                >
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

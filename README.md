@@ -1,4 +1,4 @@
-# HTML > F# DSL
+# HTML ⏵ F# DSL
 
 Convert Html fragments to one of the popular F# DSL.
 
@@ -6,6 +6,7 @@ Convert Html fragments to one of the popular F# DSL.
 -   Feliz
 -   Giraffe
 -   Bolero
+-   Web Sharper
 
 Hosted live : [https://html-to-fsharp.pages.dev/](https://html-to-fsharp.pages.dev/)
 
