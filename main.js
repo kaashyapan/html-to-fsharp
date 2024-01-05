@@ -8,6 +8,7 @@ import { to_bolero } from './dom_bolero'
 import { to_giraffe } from './dom_giraffe'
 import { to_feliz } from './dom_feliz'
 import { to_sutil } from './dom_sutil'
+import { to_websharper } from './dom_websharper'
 import { getRidofEmptyLines } from './helper'
 
 const html_editor = document.querySelector('#htmleditor')
@@ -53,6 +54,7 @@ convert_me.addEventListener('click', (e) => {
     if (lib == 'giraffe') fs_str = to_giraffe(jobjs)
     if (lib == 'bolero') fs_str = to_bolero(jobjs)
     if (lib == 'sutil') fs_str = to_sutil(jobjs)
+    if (lib == 'websharper') fs_str = to_websharper(jobjs)
 
     fs_jar.restore({ start: 0, end: 0 })
     fs_jar.updateCode(getRidofEmptyLines(fs_str))

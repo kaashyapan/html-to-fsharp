@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- General -->
+    <AssemblyName>Test</AssemblyName>
+    <Version>0.1.0</Version>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>exe</OutputType>
+
+    <!-- Build settings -->
+
+    <!-- NuGet Pack settings -->
+    <PackageId>Test</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <Compile Include="giraffe.fs" />
+      <Compile Include="test.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Giraffe.ViewEngine" Version="2.0.0-alpha-1" />
+    <PackageReference Include="Feliz" Version="2.8.0-beta.0" />
+    <PackageReference Include="Bolero" Version="0.24.25-beta" />
+    <PackageReference Include="Sutil" Version="2.0.11" />
+  </ItemGroup>
+</Project>
