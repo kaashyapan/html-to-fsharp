@@ -4,10 +4,10 @@ let accum = []
 let indent = 0
 
 const writeElement = (h) => {
-    indent = indent + 4
     if (h.tag == 'text') {
         accum.push(`prop.text "${h.data}"\n`)
     } else {
+        indent = indent + 4
         if (h.tag.includes('-')) {
             //webcomponents
             accum.push(`Html.custom "${h.tag}" [`)
@@ -44,10 +44,10 @@ const writeElement = (h) => {
             accum.push(' '.repeat(indent))
             writeElement(e)
         })
-        accum.push(' '.repeat(indent))
+        indent = indent - 4
+        if (indent > 0) accum.push(' '.repeat(indent)) //TODO if exp not necessary. Just in case...
         accum.push(`]\n`)
     }
-    indent = indent - 4
 }
 
 export function to_feliz(h) {

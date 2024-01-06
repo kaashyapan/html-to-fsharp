@@ -2,10 +2,10 @@ let accum = []
 let indent = 0
 
 const writeElement = (h) => {
-    indent = indent + 4
     if (h.tag == 'text') {
         accum.push(`"${h.data}"\n`)
     } else {
+        indent = indent + 4
         accum.push(`${h.tag} {`)
 
         let attrs = []
@@ -38,7 +38,7 @@ const writeElement = (h) => {
             writeElement(e)
         })
         indent = indent - 4
-        accum.push(' '.repeat(indent))
+        if (indent > 0) accum.push(' '.repeat(indent)) //TODO if exp not necessary. Just in case...
         accum.push(`}\n`)
     }
 }
