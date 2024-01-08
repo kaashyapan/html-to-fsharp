@@ -8,6 +8,28 @@ export default {
         themes: ['coffee', 'bumblebee'],
     },
     theme: {
-        extend: {},
+        fontFamily: {
+            sans: [
+                'Monteserrat',
+                'Segoe UI',
+                'Roboto',
+                'Arial',
+                'sans-serif',
+            ],
+            serif: [
+                'ui-serif',
+                'Georgia',
+                'Cambria',
+                'Times New Roman',
+                'serif',
+            ],
+            mono: [
+                'Consolas',
+                'ui-monospace',
+                'Liberation Mono',
+                'Courier New',
+                'monospace',
+            ],
+        },
     },
 }
