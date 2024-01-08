@@ -1,6 +1,9 @@
-import './style.scss'
-
 import { CodeJar } from 'codejar'
+import hljs from 'highlight.js/lib/core'
+
+// Import each language module you require
+import xml from 'highlight.js/lib/languages/xml' // for HTML
+import fsharp from 'highlight.js/lib/languages/fsharp'
 
 import { parse_html } from './html_parser'
 import { get_key, startup } from './choose_lib'
@@ -9,7 +12,7 @@ import { to_giraffe } from './dom_giraffe'
 import { to_feliz } from './dom_feliz'
 import { to_sutil } from './dom_sutil'
 import { to_websharper } from './dom_websharper'
-import { getRidofEmptyLines } from './helper'
+import { getRidofEmptyLines, swapHlCss } from './helper'
 
 const html_editor = document.querySelector('#htmleditor')
 const convert_me = document.querySelector('#convert-me')
@@ -17,18 +20,22 @@ const copy_me = document.querySelector('#copy-me')
 const clear_me = document.querySelector('#clear-me')
 const fs_editor = document.querySelector('#fs-editor')
 
+hljs.registerLanguage('xml', xml) // for HTML
+hljs.registerLanguage('fsharp', fsharp)
+
 const highlight_html = (editor) => {
-    editor.innerHTML = window.hljs.highlight(editor.textContent, {
+    editor.innerHTML = hljs.highlight(editor.textContent, {
         language: 'html',
     }).value
 }
 const highlight_fsharp = (editor) => {
-    editor.innerHTML = window.hljs.highlight(editor.textContent, {
+    editor.innerHTML = hljs.highlight(editor.textContent, {
         language: 'fsharp',
     }).value
 }
 
 startup()
+swapHlCss()
 
 const options = {
     tab: '    ',

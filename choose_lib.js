@@ -16,39 +16,39 @@ export function persist_key(lib) {
 
 export function changeLib(lib) {
     if (lib == 'feliz') {
-        feliz.parentElement.classList.add('is-active')
-        giraffe.parentElement.classList.remove('is-active')
-        sutil.parentElement.classList.remove('is-active')
-        bolero.parentElement.classList.remove('is-active')
-        websharper.parentElement.classList.remove('is-active')
+        feliz.classList.add('btn-primary')
+        giraffe.classList.remove('btn-primary')
+        sutil.classList.remove('btn-primary')
+        bolero.classList.remove('btn-primary')
+        websharper.classList.remove('btn-primary')
     }
     if (lib == 'giraffe') {
-        feliz.parentElement.classList.remove('is-active')
-        giraffe.parentElement.classList.add('is-active')
-        sutil.parentElement.classList.remove('is-active')
-        bolero.parentElement.classList.remove('is-active')
-        websharper.parentElement.classList.remove('is-active')
+        feliz.classList.remove('btn-primary')
+        giraffe.classList.add('btn-primary')
+        sutil.classList.remove('btn-primary')
+        bolero.classList.remove('btn-primary')
+        websharper.classList.remove('btn-primary')
     }
     if (lib == 'sutil') {
-        feliz.parentElement.classList.remove('is-active')
-        giraffe.parentElement.classList.remove('is-active')
-        sutil.parentElement.classList.add('is-active')
-        bolero.parentElement.classList.remove('is-active')
-        websharper.parentElement.classList.remove('is-active')
+        feliz.classList.remove('btn-primary')
+        giraffe.classList.remove('btn-primary')
+        sutil.classList.add('btn-primary')
+        bolero.classList.remove('btn-primary')
+        websharper.classList.remove('btn-primary')
     }
     if (lib == 'bolero') {
-        feliz.parentElement.classList.remove('is-active')
-        giraffe.parentElement.classList.remove('is-active')
-        sutil.parentElement.classList.remove('is-active')
-        bolero.parentElement.classList.add('is-active')
-        websharper.parentElement.classList.remove('is-active')
+        feliz.classList.remove('btn-primary')
+        giraffe.classList.remove('btn-primary')
+        sutil.classList.remove('btn-primary')
+        bolero.classList.add('btn-primary')
+        websharper.classList.remove('btn-primary')
     }
     if (lib == 'websharper') {
-        feliz.parentElement.classList.remove('is-active')
-        giraffe.parentElement.classList.remove('is-active')
-        sutil.parentElement.classList.remove('is-active')
-        bolero.parentElement.classList.remove('is-active')
-        websharper.parentElement.classList.add('is-active')
+        feliz.classList.remove('btn-primary')
+        giraffe.classList.remove('btn-primary')
+        sutil.classList.remove('btn-primary')
+        bolero.classList.remove('btn-primary')
+        websharper.classList.add('btn-primary')
     }
 
     persist_key(lib)
