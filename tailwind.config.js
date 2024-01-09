@@ -9,13 +9,7 @@ export default {
     },
     theme: {
         fontFamily: {
-            sans: [
-                'Montserrat',
-                'Segoe UI',
-                'Roboto',
-                'Arial',
-                'sans-serif',
-            ],
+            sans: ['Montserrat', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
             serif: [
                 'ui-serif',
                 'Georgia',

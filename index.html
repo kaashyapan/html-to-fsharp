@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/fs.svg" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
         <title>Html &gt; F#</title>
         <meta
             name="description"
@@ -22,7 +25,7 @@
     </head>
     <body>
         <main class="min-h-screen">
-            <div class="md:container md:mx-auto p-4">
+            <div class="container mx-auto p-4">
                 <div class="flex flex-wrap justify-between">
                     <div class="flex flex-row">
                         <div class="flex">
@@ -43,7 +46,10 @@
                                     />
                                 </svg>
 
-                                <span class="text-2xl font-bold whitespace-nowrap">F# DSL</span>
+                                <span
+                                    class="text-2xl font-bold whitespace-nowrap"
+                                    >F# DSL</span
+                                >
                             </a>
                         </div>
                         <div class="pl-4 mt-1">
@@ -91,7 +97,10 @@
                             <button id="bolero" class="btn btn-sm join-item">
                                 Bolero
                             </button>
-                            <button id="websharper" class="btn btn-sm join-item">
+                            <button
+                                id="websharper"
+                                class="btn btn-sm join-item"
+                            >
                                 WebSharper
                             </button>
                             <button id="giraffe" class="btn btn-sm join-item">
@@ -101,38 +110,38 @@
                     </div>
                 </div>
                 <div
-                    class="grid grid-cols-1 lg:grid-flow-col lg:auto-cols-3 justify-center items-center gap-1 py-2 place-content-between"
+                    class="flex flex-row flex-wrap lg:flex-nowrap justify-around place-content-between py-4"
                 >
+                    <div class="min-w-[45dvw]">
+                        <div
+                            id="htmleditor"
+                            class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-xml"
+                            data-manual
+                            data-gramm="false"
+                        ></div>
+                    </div>
                     <div
-                        id="htmleditor"
-                        class="w-[90dvw] lg:w-[44dvw]  h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-xml"
-                        data-manual
-                        data-gramm="false"
-                    ></div>
-
-                    <div class="w-[90dvw] lg:w-[6dvw]">
-                    <div class="flex justify-center lg:justify-start">
-                        <div class="join join-horizontal lg:join-vertical">
-                            <div class=" join-item p-4">
-                                <a id="convert-me" class=""
-                                    ><i class="gg-play-button-o"></i
-                                ></a>
-                            </div>
-                            <div class=" join-item p-4">
-                                <a id="clear-me" class=""
-                                    ><i class="gg-close-o"></i
-                                ></a>
-                            </div>
+                        class="w-[8dvw] flex flex-row justify-center lg:flex-col lg:content-center"
+                    >
+                        <div class="p-8">
+                            <a id="convert-me" class=""
+                                ><i class="gg-play-button-o"></i
+                            ></a>
+                        </div>
+                        <div class="p-8">
+                            <a id="clear-me" class=""
+                                ><i class="gg-close-o"></i
+                            ></a>
                         </div>
                     </div>
-                    </div>
-                    <div class="">
+
+                    <div class="min-w-[45dvw]">
                         <a id="copy-me" class="right-8 z-10 absolute p-4"
                             ><i class="gg-copy"></i
                         ></a>
                         <div
                             id="fs-editor"
-                            class="w-[90dvw] lg:w-[44dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-fsharp"
+                            class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-fsharp"
                         ></div>
                     </div>
                 </div>
