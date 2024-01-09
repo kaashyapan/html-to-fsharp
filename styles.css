@@ -190,7 +190,5 @@
 
 .editor {
     line-height: 20px;
-    padding: 10px;
     tab-size: 2;
-    position: sticky;
 }

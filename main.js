@@ -42,7 +42,7 @@ const options = {
     history: false,
 }
 
-const defaultMsg = '// Enter valid HTML on the left and click > to convert'
+const defaultMsg = '// Enter valid HTML on the left \n// Click > to convert'
 
 const html_jar = CodeJar(html_editor, highlight_html, options)
 const fs_jar = CodeJar(fs_editor, highlight_fsharp, options)

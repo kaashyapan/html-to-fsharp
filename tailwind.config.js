@@ -10,7 +10,7 @@ export default {
     theme: {
         fontFamily: {
             sans: [
-                'Monteserrat',
+                'Montserrat',
                 'Segoe UI',
                 'Roboto',
                 'Arial',
@@ -24,6 +24,7 @@ export default {
                 'serif',
             ],
             mono: [
+                'Monaco',
                 'Consolas',
                 'ui-monospace',
                 'Liberation Mono',
