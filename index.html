@@ -112,16 +112,30 @@
                 <div
                     class="flex flex-row flex-wrap lg:flex-nowrap justify-around place-content-between py-4"
                 >
-                    <div class="min-w-[45dvw]">
-                        <div
-                            id="htmleditor"
-                            class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-xml"
-                            data-manual
-                            data-gramm="false"
-                        ></div>
+                    <div class="">
+                        <div class="grid">
+                            <div class="watermark col-start-1 row-start-1">
+                                <div class="text-center mt-40">
+                                    <h1
+                                        class="opacity-50 pointer-events-none text-zinc-800 font-semibold text-7xl lg:text-9xl"
+                                    >
+                                        HTML
+                                    </h1>
+                                </div>
+                            </div>
+
+                            <div class="col-start-1 row-start-1">
+                                <div
+                                    id="htmleditor"
+                                    class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-xml"
+                                    data-manual
+                                    data-gramm="false"
+                                ></div>
+                            </div>
+                        </div>
                     </div>
                     <div
-                        class="w-[8dvw] flex flex-row justify-center lg:flex-col lg:content-center"
+                        class="w-[8dvw] flex flex-row justify-center lg:flex-col items-center"
                     >
                         <div class="p-8">
                             <a id="convert-me" class=""
@@ -135,14 +149,28 @@
                         </div>
                     </div>
 
-                    <div class="min-w-[45dvw]">
+                    <div class="">
                         <a id="copy-me" class="right-8 z-10 absolute p-4"
                             ><i class="gg-copy"></i
                         ></a>
-                        <div
-                            id="fs-editor"
-                            class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-fsharp"
-                        ></div>
+                        <div class="grid">
+                            <div class="watermark col-start-1 row-start-1">
+                                <div class="text-center mt-40">
+                                    <h1
+                                        class="opacity-50 pointer-events-none text-zinc-800 font-semibold text-7xl lg:text-9xl"
+                                    >
+                                        F#
+                                    </h1>
+                                </div>
+                            </div>
+
+                            <div class="col-start-1 row-start-1">
+                                <div
+                                    id="fs-editor"
+                                    class="w-[90dvw] lg:w-[45dvw] h-[90dvh] font-mono border-1 border-primary rounded p-4 editor bg-base-300 language-fsharp"
+                                ></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

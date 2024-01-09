@@ -20,30 +20,46 @@ export function attrStringify(str) {
 export function swapHlCss() {
     let theme_swap = document.getElementById('theme-swap')
 
-    let lightTheme = JSON.parse(
+    let isLight = JSON.parse(
         localStorage.getItem('html2fsthemeIsLight') ?? 'false'
     )
-    theme_swap.checked = lightTheme
-    const dark_theme = document.styleSheets[0]
-    const light_theme = document.styleSheets[1]
+    theme_swap.checked = isLight
 
-    if (lightTheme) {
-        dark_theme.disabled = true
-        light_theme.disabled = false
-    } else {
-        dark_theme.disabled = false
-        light_theme.disabled = true
-    }
+    let dark_theme = {}
+    let light_theme = {}
+    setTimeout(function () {
+        try {
+            dark_theme = document.styleSheets[0]
+            light_theme = document.styleSheets[1]
+
+            if (isLight) {
+                dark_theme.disabled = true
+                light_theme.disabled = false
+            } else {
+                dark_theme.disabled = false
+                light_theme.disabled = true
+            }
+        } catch (e) {
+            console.log(e)
+        }
+    }, 1500)
 
     theme_swap.addEventListener('click', (e) => {
-        let isLight = theme_swap['checked']
-        localStorage.setItem('html2fsthemeIsLight', JSON.stringify(isLight))
-        if (isLight) {
-            dark_theme.disabled = true
-            light_theme.disabled = false
-        } else {
-            dark_theme.disabled = false
-            light_theme.disabled = true
+        try {
+            let isLight = theme_swap['checked']
+            dark_theme = document.styleSheets[0]
+            light_theme = document.styleSheets[1]
+
+            localStorage.setItem('html2fsthemeIsLight', JSON.stringify(isLight))
+            if (isLight) {
+                dark_theme.disabled = true
+                light_theme.disabled = false
+            } else {
+                dark_theme.disabled = false
+                light_theme.disabled = true
+            }
+        } catch (e) {
+            console.log(e)
         }
     })
 }

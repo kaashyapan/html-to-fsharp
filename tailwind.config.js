@@ -9,7 +9,15 @@ export default {
     },
     theme: {
         fontFamily: {
-            sans: ['Montserrat', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+            sans: [
+                'Montserrat',
+                'ui-sans-serif',
+                'Segoe UI',
+                'Roboto',
+                'Ubuntu',
+                'Arial',
+                'sans-serif',
+            ],
             serif: [
                 'ui-serif',
                 'Georgia',
@@ -18,9 +26,9 @@ export default {
                 'serif',
             ],
             mono: [
-                'Monaco',
                 'Consolas',
                 'ui-monospace',
+                'Menlo',
                 'Liberation Mono',
                 'Courier New',
                 'monospace',
