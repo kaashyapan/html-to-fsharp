@@ -11,11 +11,11 @@ import { to_bolero } from './dom_bolero'
 import { to_giraffe } from './dom_giraffe'
 import { to_feliz } from './dom_feliz'
 import { to_sutil } from './dom_sutil'
+import { to_falco } from './dom_falco'
 import { to_websharper } from './dom_websharper'
 import { getRidofEmptyLines, swapHlCss } from './helper'
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const html_editor = document.querySelector('#htmleditor')
     const convert_me = document.querySelector('#convert-me')
     const copy_me = document.querySelector('#copy-me')
@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lib == 'bolero') fs_str = to_bolero(jobjs)
         if (lib == 'sutil') fs_str = to_sutil(jobjs)
         if (lib == 'websharper') fs_str = to_websharper(jobjs)
+        if (lib == 'falco') fs_str = to_falco(jobjs)
 
         fs_jar.restore({ start: 0, end: 0 })
         fs_jar.updateCode(getRidofEmptyLines(fs_str))
