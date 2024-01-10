@@ -52,8 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let watermarks = document.getElementsByClassName('watermark')
     html_jar.onUpdate((code) => {
-        if (code.trim() !== '') {
-            watermarks[0].hidden = true
+        if (
+            code.length > 1 &&
+            watermarks[0].classList.contains('animate-fade-in')
+        ) {
+            watermarks[0].classList.remove('animate-fade-in')
+            watermarks[0].classList.add('animate-fade-out')
         }
     })
     convert_me.addEventListener('click', (e) => {
@@ -69,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const lib = get_key()
 
-        watermarks[1].hidden = true
+        watermarks[1].classList.remove('animate-fade-in')
+        watermarks[1].classList.add('animate-fade-out')
         let fs_str = ''
 
         if (lib == 'feliz') fs_str = to_feliz(jobjs)
@@ -86,8 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     clear_me.addEventListener('click', (e) => {
         e.preventDefault()
         e.stopPropagation()
-        watermarks[0].hidden = false
-        watermarks[1].hidden = false
+        watermarks[0].classList.remove('animate-fade-out')
+        watermarks[0].classList.add('animate-fade-in')
+        watermarks[1].classList.remove('animate-fade-out')
+        watermarks[1].classList.add('animate-fade-in')
         fs_jar.restore({ start: 0, end: 0 })
         html_jar.restore({ start: 0, end: 0 })
         fs_jar.updateCode(defaultMsg)

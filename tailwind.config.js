@@ -8,6 +8,22 @@ export default {
         themes: ['coffee', 'bumblebee'],
     },
     theme: {
+        extend: {
+            keyframes: {
+                fadein: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 0.4 },
+                },
+                fadeout: {
+                    '0%': { opacity: 0.4 },
+                    '100%': { opacity: 0 },
+                },
+            },
+            animation: {
+                'fade-in': 'fadein 1.5s linear forwards',
+                'fade-out': 'fadeout 5s linear forwards',
+            },
+        },
         fontFamily: {
             sans: [
                 'Montserrat',
