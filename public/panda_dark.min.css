@@ -38,7 +38,7 @@ code.hljs {
 }
 .hljs-char.escape_,
 .hljs-operator {
-    color: #b084eb;
+    color: #45a9f9;
 }
 .hljs-deletion,
 .hljs-keyword {
@@ -69,7 +69,10 @@ code.hljs {
     color: #19f9d8;
 }
 .hljs-attribute,
-.hljs-built_in,
+.hljs-built_in {
+    color: #ff4b82;
+}
+,
 .hljs-doctag,
 .hljs-link,
 .hljs-literal,

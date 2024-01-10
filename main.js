@@ -3,7 +3,7 @@ import hljs from 'highlight.js/lib/core'
 
 // Import each language module you require
 import xml from 'highlight.js/lib/languages/xml' // for HTML
-import fsharp from 'highlight.js/lib/languages/fsharp'
+import fsharp from './hl_fsharp'
 
 import { parse_html } from './html_parser'
 import { get_key, startup } from './choose_lib'

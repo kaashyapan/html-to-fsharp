@@ -34,7 +34,10 @@ code.hljs {
 .hljs-char.escape_,
 .hljs-meta,
 .hljs-name,
-.hljs-operator,
+.hljs-operator {
+    color: #3787c7;
+}
+,
 .hljs-selector-tag {
     color: #c56200;
 }
@@ -67,7 +70,10 @@ code.hljs {
     color: #0d7d6c;
 }
 .hljs-attribute,
-.hljs-built_in,
+.hljs-built_in {
+    color: #d92792;
+}
+,
 .hljs-doctag,
 .hljs-link,
 .hljs-literal,
