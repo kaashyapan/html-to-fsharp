@@ -19,47 +19,39 @@ export function attrStringify(str) {
 
 export function swapHlCss() {
     let theme_swap = document.getElementById('theme-swap')
+    const htmleditor = document.getElementById('htmleditor')
+    const fseditor = document.getElementById('fs-editor')
 
     let isLight = JSON.parse(
         localStorage.getItem('html2fsthemeIsLight') ?? 'false'
     )
     theme_swap.checked = isLight
-
-    let dark_theme = {}
-    let light_theme = {}
-    setTimeout(function () {
-        try {
-            dark_theme = document.styleSheets[0]
-            light_theme = document.styleSheets[1]
-
-            if (isLight) {
-                dark_theme.disabled = true
-                light_theme.disabled = false
-            } else {
-                dark_theme.disabled = false
-                light_theme.disabled = true
-            }
-        } catch (e) {
-            console.log(e)
-        }
-    }, 1500)
+    if (isLight) {
+        htmleditor.classList.remove('editor-dark')
+        htmleditor.classList.add('editor-light')
+        fseditor.classList.remove('editor-dark')
+        fseditor.classList.add('editor-light')
+    } else {
+        htmleditor.classList.add('editor-dark')
+        htmleditor.classList.remove('editor-light')
+        fseditor.classList.add('editor-dark')
+        fseditor.classList.remove('editor-light')
+    }
 
     theme_swap.addEventListener('click', (e) => {
-        try {
-            let isLight = theme_swap['checked']
-            dark_theme = document.styleSheets[0]
-            light_theme = document.styleSheets[1]
-
-            localStorage.setItem('html2fsthemeIsLight', JSON.stringify(isLight))
-            if (isLight) {
-                dark_theme.disabled = true
-                light_theme.disabled = false
-            } else {
-                dark_theme.disabled = false
-                light_theme.disabled = true
-            }
-        } catch (e) {
-            console.log(e)
+        let isLight = theme_swap['checked']
+        if (isLight) {
+            htmleditor.classList.remove('editor-dark')
+            htmleditor.classList.add('editor-light')
+            fseditor.classList.remove('editor-dark')
+            fseditor.classList.add('editor-light')
+        } else {
+            htmleditor.classList.add('editor-dark')
+            htmleditor.classList.remove('editor-light')
+            fseditor.classList.add('editor-dark')
+            fseditor.classList.remove('editor-light')
         }
+
+        localStorage.setItem('html2fsthemeIsLight', JSON.stringify(isLight))
     })
 }

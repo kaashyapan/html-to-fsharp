@@ -19,6 +19,9 @@ dependencies:
         version: 5.0.6
 
 devDependencies:
+    '@tailwindcss/nesting':
+        specifier: 0.0.0-insiders.565cd3e
+        version: 0.0.0-insiders.565cd3e(postcss@8.4.32)
     autoprefixer:
         specifier: ^10
         version: 10.4.16(postcss@8.4.32)
@@ -28,6 +31,9 @@ devDependencies:
     postcss:
         specifier: ^8
         version: 8.4.32
+    postcss-nesting:
+        specifier: ^12.0.2
+        version: 12.0.2(postcss@8.4.32)
     tailwindcss:
         specifier: ^3
         version: 3.4.1
@@ -42,6 +48,18 @@ packages:
                 integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==,
             }
         engines: { node: '>=10' }
+
+    /@csstools/selector-specificity@3.0.1(postcss-selector-parser@6.0.15):
+        resolution:
+            {
+                integrity: sha512-NPljRHkq4a14YzZ3YD406uaxh7s0g6eAq3L9aLOWywoqe8PkYamAvtsh7KNX6c++ihDrJ0RiU+/z7rGnhlZ5ww==,
+            }
+        engines: { node: ^14 || ^16 || >=18 }
+        peerDependencies:
+            postcss-selector-parser: ^6.0.13
+        dependencies:
+            postcss-selector-parser: 6.0.15
+        dev: true
 
     /@esbuild/aix-ppc64@0.19.11:
         resolution:
@@ -551,6 +569,18 @@ packages:
         requiresBuild: true
         dev: true
         optional: true
+
+    /@tailwindcss/nesting@0.0.0-insiders.565cd3e(postcss@8.4.32):
+        resolution:
+            {
+                integrity: sha512-WhHoFBx19TnH/c+xLwT/sxei6+4RpdfiyG3MYXfmLaMsADmVqBkF7B6lDalgZD9YdM459MF7DtxVbWkOrV7IaQ==,
+            }
+        peerDependencies:
+            postcss: ^8.2.15
+        dependencies:
+            postcss: 8.4.32
+            postcss-nested: 5.0.6(postcss@8.4.32)
+        dev: true
 
     /@tailwindcss/typography@0.5.10(tailwindcss@3.4.1):
         resolution:
@@ -1362,6 +1392,19 @@ packages:
             postcss: 8.4.32
             yaml: 2.3.4
 
+    /postcss-nested@5.0.6(postcss@8.4.32):
+        resolution:
+            {
+                integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==,
+            }
+        engines: { node: '>=12.0' }
+        peerDependencies:
+            postcss: ^8.2.14
+        dependencies:
+            postcss: 8.4.32
+            postcss-selector-parser: 6.0.15
+        dev: true
+
     /postcss-nested@6.0.1(postcss@8.4.32):
         resolution:
             {
@@ -1373,6 +1416,20 @@ packages:
         dependencies:
             postcss: 8.4.32
             postcss-selector-parser: 6.0.15
+
+    /postcss-nesting@12.0.2(postcss@8.4.32):
+        resolution:
+            {
+                integrity: sha512-63PpJHSeNs93S3ZUIyi+7kKx4JqOIEJ6QYtG3x+0qA4J03+4n0iwsyA1GAHyWxsHYljQS4/4ZK1o2sMi70b5wQ==,
+            }
+        engines: { node: ^14 || ^16 || >=18 }
+        peerDependencies:
+            postcss: ^8.4
+        dependencies:
+            '@csstools/selector-specificity': 3.0.1(postcss-selector-parser@6.0.15)
+            postcss: 8.4.32
+            postcss-selector-parser: 6.0.15
+        dev: true
 
     /postcss-selector-parser@6.0.10:
         resolution:
