@@ -20,13 +20,13 @@ const writeElement = (h) => {
             let p = attr
                 .trim()
                 .replace(/class$/, 'className')
-                .replace(/id$/, `id'`)
+                .replace(/for$/, `for'`)
                 .replace(/type$/, "type'")
 
             const _attr = attrStringify(h.attrs[attr])
             if (p.includes('-')) {
                 //webcomponents
-                attrs.push(`Attr.custom "${p}" ${_attr}\n`)
+                attrs.push(`Attr.custom("${p}", ${_attr})\n`)
             } else {
                 attrs.push(`Attr.${p} ${_attr}\n`)
             }
