@@ -28,7 +28,11 @@ const writeElement = (h) => {
                 //webcomponents
                 attrs.push(`Attr.custom("${p}", ${_attr})\n`)
             } else {
-                attrs.push(`Attr.${p} ${_attr}\n`)
+                if (p == "required") {
+                  attrs.push(`Attr.${p} true\n`)
+                } else {
+                  attrs.push(`Attr.${p} ${_attr}\n`)
+                }
             }
         }
 
