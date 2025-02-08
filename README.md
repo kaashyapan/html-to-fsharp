@@ -7,6 +7,8 @@ Convert Html fragments to one of the popular F# DSL.
 -   Giraffe
 -   Bolero
 -   Web Sharper
+-   Falco
+-   Oxpecker
 
 Hosted live : [https://html-to-fsharp.pages.dev/](https://html-to-fsharp.pages.dev/)
 

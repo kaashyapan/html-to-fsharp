@@ -4,6 +4,7 @@ const sutil = document.querySelector('#sutil')
 const bolero = document.querySelector('#bolero')
 const websharper = document.querySelector('#websharper')
 const falco = document.querySelector('#falco')
+const oxpecker = document.querySelector('#oxpecker')
 
 export function get_key() {
     let defaultlib = localStorage.getItem('html2fslib') ?? 'feliz'
@@ -23,6 +24,7 @@ export function changeLib(lib) {
         bolero.classList.remove('btn-primary')
         websharper.classList.remove('btn-primary')
         falco.classList.remove('btn-primary')
+        oxpecker.classList.remove('btn-primary')
     }
     if (lib == 'giraffe') {
         feliz.classList.remove('btn-primary')
@@ -31,6 +33,7 @@ export function changeLib(lib) {
         bolero.classList.remove('btn-primary')
         websharper.classList.remove('btn-primary')
         falco.classList.remove('btn-primary')
+        oxpecker.classList.remove('btn-primary')
     }
     if (lib == 'sutil') {
         feliz.classList.remove('btn-primary')
@@ -39,6 +42,7 @@ export function changeLib(lib) {
         bolero.classList.remove('btn-primary')
         websharper.classList.remove('btn-primary')
         falco.classList.remove('btn-primary')
+        oxpecker.classList.remove('btn-primary')
     }
     if (lib == 'bolero') {
         feliz.classList.remove('btn-primary')
@@ -47,6 +51,7 @@ export function changeLib(lib) {
         bolero.classList.add('btn-primary')
         websharper.classList.remove('btn-primary')
         falco.classList.remove('btn-primary')
+        oxpecker.classList.remove('btn-primary')
     }
     if (lib == 'websharper') {
         feliz.classList.remove('btn-primary')
@@ -55,6 +60,7 @@ export function changeLib(lib) {
         bolero.classList.remove('btn-primary')
         websharper.classList.add('btn-primary')
         falco.classList.remove('btn-primary')
+        oxpecker.classList.remove('btn-primary')
     }
     if (lib == 'falco') {
         feliz.classList.remove('btn-primary')
@@ -63,6 +69,16 @@ export function changeLib(lib) {
         bolero.classList.remove('btn-primary')
         websharper.classList.remove('btn-primary')
         falco.classList.add('btn-primary')
+        oxpecker.classList.remove('btn-primary')
+    }
+    if (lib == 'oxpecker') {
+        feliz.classList.remove('btn-primary')
+        giraffe.classList.remove('btn-primary')
+        sutil.classList.remove('btn-primary')
+        bolero.classList.remove('btn-primary')
+        websharper.classList.remove('btn-primary')
+        falco.classList.remove('btn-primary')
+        oxpecker.classList.add('btn-primary')
     }
 
     persist_key(lib)
@@ -106,5 +122,11 @@ export function startup() {
         e.preventDefault()
         e.stopPropagation()
         changeLib('falco')
+    })
+
+    oxpecker.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        changeLib('oxpecker')
     })
 }
