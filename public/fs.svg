@@ -1,8 +1,42 @@
 
 <svg id="eCRUIkybv6Q1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.88" height="42" viewBox="0 0 62.441665 59.266668" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
 <style><![CDATA[
-#eCRUIkybv6Q3_tr {animation: eCRUIkybv6Q3_tr__tr 1300ms linear infinite normal forwards}@keyframes eCRUIkybv6Q3_tr__tr { 0% {transform: translate(14.816667px,29.633333px) rotate(0deg)} 46.153846% {transform: translate(14.816667px,29.633333px) rotate(0deg)} 100% {transform: translate(14.816667px,29.633333px) rotate(180deg)}} #eCRUIkybv6Q5_tr {animation: eCRUIkybv6Q5_tr__tr 1300ms linear infinite normal forwards}@keyframes eCRUIkybv6Q5_tr__tr { 0% {transform: translate(47.095833px,29.633333px) rotate(0deg)} 23.076923% {transform: translate(47.095833px,29.633333px) rotate(0deg)} 38.461538% {transform: translate(47.095833px,29.633333px) rotate(180deg)} 61.538462% {transform: translate(47.095833px,29.633333px) rotate(180deg)} 76.923077% {transform: translate(47.095833px,29.633333px) rotate(32400deg)} 100% {transform: translate(47.095833px,29.633333px) rotate(32400deg)}}
+#eCRUIkybv6Q3_tr {
+  animation: 
+    eCRUIkybv6Q3_tr__tr 5300ms linear infinite normal forwards
+}
+@keyframes eCRUIkybv6Q3_tr__tr 
+      { 0% 
+        { transform: translate(14.816667px,29.633333px) rotate(0deg)} 46.153846% 
+        { transform: translate(14.816667px,29.633333px) rotate(0deg)} 100% 
+        { transform: translate(14.816667px,29.633333px) rotate(180deg)}
+      } 
+#eCRUIkybv6Q5_tr {
+    animation: 
+      eCRUIkybv6Q5_tr__tr 5300ms linear infinite normal forwards
+}
+@keyframes eCRUIkybv6Q5_tr__tr 
+        { 0% 
+          {transform: translate(47.095833px,29.633333px) rotate(0deg)} 23.076923% 
+          {transform: translate(47.095833px,29.633333px) rotate(0deg)} 38.461538% 
+          {transform: translate(47.095833px,29.633333px) rotate(180deg)} 61.538462% 
+          {transform: translate(47.095833px,29.633333px) rotate(180deg)} 76.923077% 
+          {transform: translate(47.095833px,29.633333px) rotate(32400deg)} 100% 
+          {transform: translate(47.095833px,29.633333px) rotate(32400deg)}
+        }
 ]]></style>
-<g><g id="eCRUIkybv6Q3_tr" transform="translate(14.816667,29.633333) rotate(0)"><path d="M29.633333,59.266667L0,29.633333L29.633333,0v14.816667L14.816667,29.633333L29.633333,44.45v14.816667Z" transform="translate(-14.816667,-29.633333)" fill="#378bba" stroke-width="0.264583"/></g><path d="M29.633333,40.216667L19.05,29.633333L29.633333,19.05v21.166667Z" fill="#378bba" stroke-width="0.264583"/><g id="eCRUIkybv6Q5_tr" transform="translate(47.095833,29.633333) rotate(0)"><path d="M31.75,0v14.816667L46.566667,29.633333L31.75,44.45v14.816667L62.441667,29.633333L31.75,0Z" transform="translate(-47.095833,-29.633333)" fill="#30b9db" stroke-width="0.264583"/></g></g></svg>
+<g>
+  <g id="eCRUIkybv6Q3_tr" transform="translate(14.816667,29.633333) rotate(0)">
+    <path d="M29.633333,59.266667L0,29.633333L29.633333,0v14.816667L14.816667,29.633333L29.633333,44.45v14.816667Z" 
+      transform="translate(-14.816667,-29.633333)" fill="#378bba" stroke-width="0.264583"/>
+  </g>
+  <path d="M29.633333,40.216667L19.05,29.633333L29.633333,19.05v21.166667Z" fill="#378bba" stroke-width="0.264583"/>
+  <g id="eCRUIkybv6Q5_tr" transform="translate(47.095833,29.633333) rotate(0)">
+    <path d="M31.75,0v14.816667L46.566667,29.633333L31.75,44.45v14.816667L62.441667,29.633333L31.75,0Z" 
+      transform="translate(-47.095833,-29.633333)" fill="#30b9db" stroke-width="0.264583"/>
+  </g>
+</g>
+
+</svg>
 
 
