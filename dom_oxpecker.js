@@ -2,13 +2,14 @@ let accum = []
 let indent = 0
 
 const isNumeric = (value) => {
-    return(/^\d+$/.test(value))
+    let x = /^\d+$/.test(value.trim(" ").trim(`"`))
+    return x
 }
 
 const isBool = (value) => {
-    if (value == "") { return true}
-    if (value == "true") { return true}
-    if (value == "false") { return false}
+    if (value == "") { return `"true"`}
+    // if (value == "true") { return true}
+    // if (value == "false") { return false}
     return `"${value}"`
 }
 
@@ -35,21 +36,26 @@ const writeElement = (h) => {
         }
         accum.push(`${tagname}`)
 
+        let _attrs = [] //Unseparated by commas
         let attrs = []
         let data_attrs = []
         let other_attrs = []
-        let index = 0
-        let length = Object.keys(h.attrs).length
         for (let property in h.attrs) {
-            index = index +1
-            let propVal = isNumeric(h.attrs[property]) ? h.attrs[property] : `"${h.attrs[property]}"`
-            propVal = isBool(h.attrs[property])
-
+            let propVal = ""
+            if (isNumeric(h.attrs[property])) {
+                propVal = h.attrs[property].trim(" ").trim(`"`)
+            } else { 
+                //IsBool returns a quoted string if it is not a bool
+                //returns quoted bool values for bools
+                //returns true is no bool value is specified
+                propVal = isBool(h.attrs[property])
+            }
+            
             if (property.startsWith('data-')) {
                 let dataPropName = property.substring(5)
                 data_attrs.push(`"${dataPropName}", ${propVal}`)
             } else if (property.includes('-')) {
-                other_attrs.push(`"${property}"=${propVal}`)
+                other_attrs.push(`"${property}", ${propVal}`)
             } else {
                 let p = property
                     .trim()
@@ -60,17 +66,22 @@ const writeElement = (h) => {
                     .replace(/open$/, "open'")
                     .replace(/checked$/, "checked'")
 
-                if (index < length) {
-                    attrs.push(`${p}=${propVal},\n`)
-                } else {
-                    attrs.push(`${p}=${propVal}\n`)
-                }
+                _attrs.push(`${p}=${propVal}`)
+            }
+        }
+
+        // Intersperse attributes with comma
+        for (let [index, a] of _attrs.entries()) {
+            if (index < _attrs.length -1) {
+                attrs.push(`${a},\n`)    
+            } else {
+                attrs.push(`${a}\n`)    
             }
         }
 
         if (attrs.length > 0) {
-            accum.push(`\n`)
-            accum.push(' '.repeat(indent))
+            // accum.push(`\n`)
+            // accum.push(' '.repeat(indent))
             accum.push(`(`)
             accum.push(`\n`)
             indent = indent + 2
@@ -80,13 +91,13 @@ const writeElement = (h) => {
             accum.push(' '.repeat(indent))
             accum.push(`)\n`)
         } else {
-            accum.push(`\n`)
-            accum.push(' '.repeat(indent))
+            // accum.push(`\n`)
+            // accum.push(' '.repeat(indent))
             accum.push(`()\n`)
         }
 
         for (let attr of data_attrs) {
-            accum.push(`\n`)
+            // accum.push(`\n`)
             accum.push(' '.repeat(indent))
             accum.push(`.data(`)
             accum.push(attr)
@@ -94,7 +105,7 @@ const writeElement = (h) => {
         }
 
         for (let attr of other_attrs) {
-            accum.push(`\n`)
+            // accum.push(`\n`)
             accum.push(' '.repeat(indent))
             accum.push(`.attr(`)
             accum.push(attr)
