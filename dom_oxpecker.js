@@ -127,8 +127,12 @@ const writeElement = (h) => {
             accum.push(`}\n`)
         } else {
             accum.push(`\n`)
+        /* CEs cant take empty list of attrs */
+        /*
+            accum.push(`\n`)
             accum.push(' '.repeat(indent))
             accum.push(`{}\n`)
+        */
         }
     }
     indent = indent - 2
